@@ -1,0 +1,195 @@
+2018.3:
+ * Version 4.0 (Rev. 4)
+ * Bug Fix: Corrected an issue where the example design would be incorrectly generated if TX or RX is set to JESD204C with 8B10B encoding
+ * Feature Enhancement: Added internal waivers to mask invalid CDC and DRC violations from the IP user
+ * Feature Enhancement: Improved constraints for the CPLL CAL block when TX and RX are set to QPLL and Dynamic switching is enabled
+ * Revision change in one or more subcores
+
+2018.2:
+ * Version 4.0 (Rev. 3)
+ * Feature Enhancement: Added support for virtexuplus58g device family
+ * Revision change in one or more subcores
+
+2018.1:
+ * Version 4.0 (Rev. 2)
+ * Bug Fix: Corrected an issue where numerical rounding could occasionally result in an incorrect refclk frequency being set in GT when using a fractional PLL
+ * Bug Fix: Corrected an issue where numerical rounding could occasionally result in incorrect frequency being set on tx/rxoutclk ports in IP integrator.
+ * Feature Enhancement: Enabled the choice of linecoding (64B66B or 8B10B) when JESD204C standard version is chosen.
+ * Feature Enhancement: Modified the GT instantiation such that if the design will not use the CPLL then no CPLL CAL block will be generated for GT's that require it.
+ * Feature Enhancement: Added optional transceiver debug port dmonitorclk for Ultrascale and Ultrascale plus devices
+ * Feature Enhancement: Modified constraints to increased processing efficiency (No functional change)
+ * Revision change in one or more subcores
+
+2017.4:
+ * Version 4.0 (Rev. 1)
+ * Bug Fix: Fixed issue causing CPLL reset pulse period to be too short in certain configurations AR70023
+ * Bug Fix: Fixed issue stopping the user from chosing the GT type with Zynq Ultrascale Plus devices in ffvd1760 package
+ * Revision change in one or more subcores
+
+2017.3:
+ * Version 4.0
+ * Bug Fix: Fixed issue causing RXLPMEN values to be incorrect when neither AXI-Lite nor Transceiver Debug are enabled AR69508
+ * Bug Fix: Fixed issue causing CPLL_PD values incorrect if CPLL is not used and AXI-Lite is not enabled  AR69510
+ * Feature Enhancement: Added option to choose between JESD204B and JESD204C IP core interfaces, this replaces 32/64bit option.
+ * Feature Enhancement: Added 8B10B signaling ports to JESD204C IP core
+ * Revision change in one or more subcores
+
+2017.2:
+ * Version 3.4
+ * Feature Enhancement: Updated GT wizard to version 1.7
+ * Feature Enhancement: Added port gt_powergood for Ultrascale and Ultrascaleplus devices
+ * Feature Enhancement: Added registers to enable programming the CPLL clock period calibration values for GTHE4 and GTYE4 when dynamically changing line rate
+ * Revision change in one or more subcores
+
+2017.1:
+ * Version 3.3
+ * Feature Enhancement: Added support for UltraScale RF SoC.
+ * Feature Enhancement: For 64-bit interfaces only. The clock IO for the core has been revised.
+ * Feature Enhancement: For 64-bit interfaces only. The port gt_prbssel has been removed.
+ * Feature Enhancement: For 64-bit interfaces only. The transceiver type supported has been reduced to GTYE3 and GTYE4.
+ * Revision change in one or more subcores
+
+2016.4:
+ * Version 3.2 (Rev. 1)
+ * Feature Enhancement: Modified GUI not to set max line rate parameter to device's max line rate
+ * Revision change in one or more subcores
+
+2016.3:
+ * Version 3.2
+ * Bug Fix: Fixed issue where CPLL PD was not being held high for at least 2us during reset. Ultrascale configurations only: AR67354
+ * Bug Fix: Fixed width of gt_txdiffctrl register (from 4 bits to 5) from AXI4-Lite Interface. GTYE3 configurations only
+ * Bug Fix: Changed default value of gt_txdiffctrl from 1000 to 1100 based on Transceiver Wizard default value. Ultrascale configurations only
+ * Feature Enhancement: Added option to GUI to select a static or dynamic line rate configuration. See PG198 for more information
+ * Feature Enhancement: Added option to GUI to change Insertion loss at Nyquist value. UltraScale configurations only
+ * Feature Enhancement: Added new read-only registers that display start-up configuration. See PG198 for more information
+ * Other: Added support for GTYE4 devices
+ * Other: Removed BUFG_GT from txouclk and rxoutclk. Ultrascale configurations only
+ * Other: Source HDL files are concatenated into a single file to speed up synthesis and simulation. No changes required by the user
+ * Revision change in one or more subcores
+
+2016.2:
+ * Version 3.1 (Rev. 1)
+ * QPLLs are powered down by default when using CPLL only configurations to reduce power consumption
+ * Fixed issue where gt_rxlpmen was being set to 0 when Transceiver debug ports or the AXI4-Lite interface were enabled
+ * Set default value of gt_txdiffctrl to 0x1000 when AXI4-Lite Interface is enabled
+ * Revision change in one or more subcores
+
+2016.1:
+ * Version 3.1
+ * Fixed issue where transceiver settings were incorrectly set if the channel did not start from a QUAD boundary and had more than 4 lanes. UltraScale only (AR66029)
+ * Added 64-bit data path with 64b/66b encoding/decoding. UltraScale only
+ * Added GUI option to select transceiver channel attenuation. UltraScale only
+ * Removed ports gt_rxdfelpmreset and gt_rxlpmen from Transceiver Debug bus when AXI4-Lite is enabled, ports are now controlled using a register in this case. See PG198 for more information
+ * Fixed issue where powering down a lane would cause rx reset done not to go high
+ * Fixed issue where powering down the first channel would cause rxoutclk to have the wrong frequency
+ * A BUFG_GT has been added to the tx/rxoutclk output when support logic is included in the core. UltraScale configurations only
+ * Changes to HDL library management to support Vivado IP simulation library
+ * Revision change in one or more subcores
+
+2015.4.2:
+ * Version 3.0 (Rev. 1)
+ * No changes
+
+2015.4.1:
+ * Version 3.0 (Rev. 1)
+ * No changes
+
+2015.4:
+ * Version 3.0 (Rev. 1)
+ * Version register is now automatically set by Vivado during core generation
+ * Improved logic around reset_done output in 7-Series configurations. A tx/rx_reset_gt will cause this output to go low.
+ * Revision change in one or more subcores
+
+2015.3:
+ * Version 3.0
+ * Fixed CPLLPD connection. Output from AXI register map was not connected to the input of the Transceiver for UltraScale devices when AXI4-Lite enabled
+ * Added two new ports, tx_sys_reset and rx_sys_reset. See PG198 for details
+ * Added new resets to AXI register space, tx_sys_reset_axi and rx_sys_reset_axi
+ * Removed unused TX and RX clock select registers for each individual lane from AXI register space. See PG198 for more information
+ * Funcionality of tx_reset_gt and rx_reset_gt has changed to reset only the transceiver channel (gttxreset and gtrxreset inputs of Transceiver). These reset no longer reset the PLLs. See PG198 for more information
+ * Optimized the Common and Transceiver selectors as a single register for each in the configuration sub-bank. Previously individual registers in the sub-banks. See PG198 for more information
+ * Added mmcm_locked output port to 7-Series Artix configurations with Shared Logic in Core enabled
+ * Added support for UltraScale GTY Transceivers
+ * Added GUI option to select transceiver channel placement. UltraScale configurations only
+ * Added GUI option to extend reset by 3ms for fast programming modes such as BPI or PCAP. 7-Series only
+ * IP revision number added to HDL module, library, and include file names, to support designs with both locked and upgraded IP instances
+
+2015.2.1:
+ * Version 2.0 (Rev. 1)
+ * No changes
+
+2015.2:
+ * Version 2.0 (Rev. 1)
+ * Removed redundant cpll reset logic for 7-Series. This input was being ignored by the Transceiver. Controlled by internal state machines
+ * Added logic to create a reset pulse if PLL LOCK is lost. 7-Series only
+ * Fixed issue with CPLLPD and QPLLPD default values when AXI4-Lite Management Interface is enabled. PLLs are powered down if not enabled
+
+2015.1:
+ * Version 2.0
+ * Added optional AXI4-Lite Management Interface.
+ * Fixed issue where tx and rx gt_reset inputs were resetting the entire Transceciver and not the individual TX or RX paths
+ * Added debug port gt*_txinhibit_in. This will affect 7-Series designs with Transceiver Debug enabled
+ * Added debug ports gt_txinhibit and gt_pcsrsvdin. This will affect all UltraScale designs with Transceiver Debug enabled
+ * For UltraScale devices fixed issue where QPLL0 and QPLL1 resets were tied together. This port change will affect designs with Shared Logic in Example Design
+ * Added gt_rxbufreset to GUI symbol. This will affect UltraScale designs with Transceiver Debug enabled.
+
+2014.4.1:
+ * Version 1.0 (Rev. 2)
+ * Updated Ultrascale Transceiver Wizard to version 1.5
+
+2014.4:
+ * Version 1.0 (Rev. 1)
+ * Added support for Defense-grade Virtex-7Q, Kintex-7Q, Zynq-7000 and Artix-7Q devices
+ * Added support for XA Artix-7 and Zynq-7000 devices
+ * Added missing 7-Series transceiver debug ports to GUI symbol (gtN_rxstatus_out, gtN_rxbyteisaligned_out, gtN_rxbyterealign_out, gtN_rxbufreset_in)
+ * Enabled all transceiver reference clock values
+
+2014.3:
+ * Version 1.0
+ * Initial Release
+
+(c) Copyright 2014 - 2018 Xilinx, Inc. All rights reserved.
+
+This file contains confidential and proprietary information
+of Xilinx, Inc. and is protected under U.S. and
+international copyright and other intellectual property
+laws.
+
+DISCLAIMER
+This disclaimer is not a license and does not grant any
+rights to the materials distributed herewith. Except as
+otherwise provided in a valid license issued to you by
+Xilinx, and to the maximum extent permitted by applicable
+law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+(2) Xilinx shall not be liable (whether in contract or tort,
+including negligence, or under any other theory of
+liability) for any loss or damage of any kind or nature
+related to, arising under or in connection with these
+materials, including for any direct, or any indirect,
+special, incidental, or consequential loss or damage
+(including loss of data, profits, goodwill, or any type of
+loss or damage suffered as a result of any action brought
+by a third party) even if such damage or loss was
+reasonably foreseeable or Xilinx had been advised of the
+possibility of the same.
+
+CRITICAL APPLICATIONS
+Xilinx products are not designed or intended to be fail-
+safe, or for use in any application requiring fail-safe
+performance, such as life-support or safety devices or
+systems, Class III medical devices, nuclear facilities,
+applications related to the deployment of airbags, or any
+other applications that could lead to death, personal
+injury, or severe property or environmental damage
+(individually and collectively, "Critical
+Applications"). Customer assumes the sole risk and
+liability of any use of Xilinx products in Critical
+Applications, subject only to applicable laws and
+regulations governing limitations on product liability.
+
+THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+PART OF THIS FILE AT ALL TIMES.

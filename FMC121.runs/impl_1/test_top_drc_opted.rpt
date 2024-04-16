@@ -1,0 +1,41 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Mar 11 11:20:14 2024
+| Host         : DESKTOP-WORK-MY running 64-bit major release  (build 9200)
+| Command      : report_drc -file test_top_drc_opted.rpt -pb test_top_drc_opted.pb -rpx test_top_drc_opted.rpx
+| Design       : test_top
+| Device       : xczu15eg-ffvb1156-2-i
+| Speed File   : -2
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++--------+----------+--------------------------+------------+
+| Rule   | Severity | Description              | Violations |
++--------+----------+--------------------------+------------+
+| BUFC-1 | Warning  | Input Buffer Connections | 1          |
++--------+----------+--------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer fmc121_top_adc/ad/IOBUF_inst/IBUFCTRL_INST (in fmc121_top_adc/ad/IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+

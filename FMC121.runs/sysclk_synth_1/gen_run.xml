@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="sysclk_synth_1" LaunchPart="xczu15eg-ffvb1156-2-i" LaunchTime="1678416074">
+  <File Type="PA-TCL" Name="sysclk.tcl"/>
+  <File Type="REPORTS-TCL" Name="sysclk_reports.tcl"/>
+  <File Type="RDS-RDS" Name="sysclk.vds"/>
+  <File Type="RDS-UTIL" Name="sysclk_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="sysclk_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="sysclk.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/sysclk">
+    <File Path="$PSRCDIR/sources_1/ip/sysclk/sysclk.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.xci"/>
+        <Attr Name="ImportTime" Val="1678416071"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="sysclk"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/sysclk">
+    <File Path="$PSRCDIR/sources_1/ip/sysclk/sysclk.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.xci"/>
+        <Attr Name="ImportTime" Val="1678416071"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="sysclk"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

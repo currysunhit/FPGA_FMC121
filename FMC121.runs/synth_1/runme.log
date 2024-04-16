@@ -1,0 +1,1078 @@
+
+*** Running vivado
+    with args -log test_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source test_top.tcl -notrace
+Command: synth_design -top test_top -part xczu15eg-ffvb1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu15eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu15eg'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20600 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 520.270 ; gain = 108.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'test_top' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20423]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20423]
+INFO: [Synth 8-6157] synthesizing module 'sysclk' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/sysclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sysclk' (2#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/sysclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'fmc121_top' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:71]
+INFO: [Synth 8-3491] module 'ad9680' declared at 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/ad9680.vhd:11' bound to instance 'ad' of component 'ad9680' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:582]
+INFO: [Synth 8-638] synthesizing module 'ad9680' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/ad9680.vhd:25]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/ad9680.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'ad9680' (3#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/ad9680.vhd:25]
+INFO: [Synth 8-3491] module 'hmc7044' declared at 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:10' bound to instance 'h7044' of component 'hmc7044' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:641]
+INFO: [Synth 8-638] synthesizing module 'hmc7044' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:26]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:412]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:420]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:433]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:435]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:437]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:439]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:441]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:443]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 12 wide and choice expression is 8 wide [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:448]
+INFO: [Synth 8-256] done synthesizing module 'hmc7044' (4#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:26]
+INFO: [Synth 8-3491] module 'jesd204b_ad' declared at 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/jesd204b_ad_stub.v:6' bound to instance 'jesd204' of component 'jesd204b_ad' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:682]
+INFO: [Synth 8-6157] synthesizing module 'jesd204b_ad' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/jesd204b_ad_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'jesd204b_ad' (5#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/jesd204b_ad_stub.v:6]
+INFO: [Synth 8-3491] module 'neg_data' declared at 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/neg_data.vhd:33' bound to instance 'neg_data_inst' of component 'neg_data' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:748]
+INFO: [Synth 8-638] synthesizing module 'neg_data' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/neg_data.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'neg_data' (6#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/neg_data.vhd:41]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OBUFDS_inst' to cell 'OBUFDS' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:754]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'IBUFDS_inst3' to cell 'IBUFDS' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:767]
+INFO: [Synth 8-3491] module 'jesd204_phy_0' declared at 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/jesd204_phy_0_stub.v:6' bound to instance 'jesd204_phy_INST' of component 'jesd204_phy_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:835]
+INFO: [Synth 8-6157] synthesizing module 'jesd204_phy_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/jesd204_phy_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'jesd204_phy_0' (7#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/jesd204_phy_0_stub.v:6]
+INFO: [Synth 8-3491] module 'jesd204_dac_clocking' declared at 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/jesd204_dac_clocking.v:23' bound to instance 'jesd204_ad_clk' of component 'jesd204_dac_clocking' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:908]
+INFO: [Synth 8-6157] synthesizing module 'jesd204_dac_clocking' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/jesd204_dac_clocking.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20599]
+	Parameter REFCLK_EN_TX_PATH bound to: 1'b0 
+	Parameter REFCLK_HROW_CK_SEL bound to: 2'b00 
+	Parameter REFCLK_ICNTL_RX bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (8#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20599]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:767]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (9#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:767]
+INFO: [Synth 8-6157] synthesizing module 'GLB_dcm' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/GLB_dcm_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'GLB_dcm' (10#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/GLB_dcm_stub.v:5]
+WARNING: [Synth 8-3848] Net glblclk_buf2 in module/entity jesd204_dac_clocking does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/jesd204_dac_clocking.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'jesd204_dac_clocking' (11#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/jesd204_dac_clocking.v:23]
+WARNING: [Synth 8-6014] Unused sequential element rst_count2_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:659]
+WARNING: [Synth 8-6014] Unused sequential element rst_ad_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:660]
+WARNING: [Synth 8-6014] Unused sequential element rst_out_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:661]
+WARNING: [Synth 8-3848] Net common0_qpll0_lock_out in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:452]
+WARNING: [Synth 8-3848] Net common1_qpll0_lock_out in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:455]
+WARNING: [Synth 8-3848] Net DAconfig_finishn in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:443]
+WARNING: [Synth 8-3848] Net tx_reset_gt in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:499]
+WARNING: [Synth 8-3848] Net gt_prbssel_out in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:517]
+WARNING: [Synth 8-3848] Net gt0_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:502]
+WARNING: [Synth 8-3848] Net gt0_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:501]
+WARNING: [Synth 8-3848] Net gt1_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:504]
+WARNING: [Synth 8-3848] Net gt1_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:503]
+WARNING: [Synth 8-3848] Net gt2_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:506]
+WARNING: [Synth 8-3848] Net gt2_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:505]
+WARNING: [Synth 8-3848] Net gt3_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:508]
+WARNING: [Synth 8-3848] Net gt3_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:507]
+WARNING: [Synth 8-3848] Net gt4_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:510]
+WARNING: [Synth 8-3848] Net gt4_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:509]
+WARNING: [Synth 8-3848] Net gt5_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:512]
+WARNING: [Synth 8-3848] Net gt5_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:511]
+WARNING: [Synth 8-3848] Net gt6_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:514]
+WARNING: [Synth 8-3848] Net gt6_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:513]
+WARNING: [Synth 8-3848] Net gt7_txcharisk in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:516]
+WARNING: [Synth 8-3848] Net gt7_txdata in module/entity fmc121_top does not have driver. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:515]
+INFO: [Synth 8-256] done synthesizing module 'fmc121_top' (12#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FMC121_top.vhd:71]
+INFO: [Synth 8-6157] synthesizing module 'pulse_data' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FIR_filter' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FIR_filter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/fir_compiler_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_0' (13#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/fir_compiler_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'm_axis_data_tdata' does not match port width (40) of module 'fir_compiler_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FIR_filter.v:50]
+WARNING: [Synth 8-689] width (32) of port connection 'm_axis_data_tdata' does not match port width (40) of module 'fir_compiler_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FIR_filter.v:59]
+WARNING: [Synth 8-689] width (32) of port connection 'm_axis_data_tdata' does not match port width (40) of module 'fir_compiler_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FIR_filter.v:68]
+WARNING: [Synth 8-689] width (32) of port connection 'm_axis_data_tdata' does not match port width (40) of module 'fir_compiler_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FIR_filter.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_filter' (14#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/FIR_filter.v:23]
+WARNING: [Synth 8-689] width (40) of port connection 'I0_data_tdata' does not match port width (32) of module 'FIR_filter' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:95]
+WARNING: [Synth 8-689] width (40) of port connection 'I1_data_tdata' does not match port width (32) of module 'FIR_filter' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:96]
+WARNING: [Synth 8-689] width (40) of port connection 'I2_data_tdata' does not match port width (32) of module 'FIR_filter' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:97]
+WARNING: [Synth 8-689] width (40) of port connection 'I3_data_tdata' does not match port width (32) of module 'FIR_filter' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:98]
+INFO: [Synth 8-6157] synthesizing module 'pulse_sum_module' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_sum.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vio_1' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/vio_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_1' (15#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/vio_1_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_pulse_parameter'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_sum.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_sum_module' (16#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_sum.v:23]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (17#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/blk_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'dina' does not match port width (16) of module 'blk_mem_gen_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:149]
+WARNING: [Synth 8-689] width (32) of port connection 'douta' does not match port width (16) of module 'blk_mem_gen_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:150]
+INFO: [Synth 8-6157] synthesizing module 'RAM_rw' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/ram_rw.v:2]
+	Parameter max_addr bound to: 16'b1111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'RAM_rw' (18#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/ram_rw.v:2]
+WARNING: [Synth 8-689] width (32) of port connection 'ram_in_data' does not match port width (16) of module 'RAM_rw' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:169]
+WARNING: [Synth 8-689] width (32) of port connection 'ram_out_data' does not match port width (16) of module 'RAM_rw' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:170]
+INFO: [Synth 8-6157] synthesizing module 'data_send' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/data_send.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_send' (19#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/data_send.v:23]
+INFO: [Synth 8-6157] synthesizing module 'UART_rx' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/UART_rx.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter BPS_CNT bound to: 434 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_rx' (20#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/UART_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Decode' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/Decode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Decode' (21#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/Decode.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (22#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Fifo_cache' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/Fifo_cache.v:1]
+INFO: [Synth 8-226] default block is never used [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/Fifo_cache.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'Fifo_cache' (23#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/Fifo_cache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_tx' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/UART_tx.v:1]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter BPS_CNT bound to: 434 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_tx' (24#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/UART_tx.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:279]
+INFO: [Synth 8-6157] synthesizing module 'ila_3' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/ila_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_3' (25#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/ila_3_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'probe9' does not match port width (16) of module 'ila_3' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:292]
+WARNING: [Synth 8-689] width (32) of port connection 'probe11' does not match port width (16) of module 'ila_3' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:294]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_pulse_sum'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:107]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_pulse_sum_ila'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:279]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_RAM_RW'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:160]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_blk_mem_gen_0'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:145]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_data' (26#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/pulse_data.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (27#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/.Xil/Vivado-14964-DESKTOP-WORK-MY/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0_inst'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fmc121_top_adc'. This will prevent further optimization [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:76]
+WARNING: [Synth 8-6014] Unused sequential element AD2_Data0_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:136]
+WARNING: [Synth 8-6014] Unused sequential element AD2_Data1_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:137]
+WARNING: [Synth 8-6014] Unused sequential element AD2_Data2_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:138]
+WARNING: [Synth 8-6014] Unused sequential element AD2_Data3_reg was removed.  [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'test_top' (28#1) [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/test_top.v:3]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[19]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[18]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[1]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[0]
+WARNING: [Synth 8-3331] design jesd204_dac_clocking has unconnected port coreclk2
+WARNING: [Synth 8-3331] design jesd204_dac_clocking has unconnected port glblclk_pad_n
+WARNING: [Synth 8-3331] design jesd204_dac_clocking has unconnected port glblclk_pad_p
+WARNING: [Synth 8-3331] design fmc121_top has unconnected port TRIG_IN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 577.633 ; gain = 166.004
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 577.633 ; gain = 166.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 577.633 ; gain = 166.004
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xczu15eg-ffvb1156-2-i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_3/ila_3_in_context.xdc] for cell 'pulse_data_u/u_pulse_sum_ila'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_3/ila_3_in_context.xdc] for cell 'pulse_data_u/u_pulse_sum_ila'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u0_FIR_LP_100M'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u0_FIR_LP_100M'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u1_FIR_LP_100M'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u1_FIR_LP_100M'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u2_FIR_LP_100M'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u2_FIR_LP_100M'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u3_FIR_LP_100M'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'pulse_data_u/u_FIR_filter/u3_FIR_LP_100M'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/jesd204b_ad/jesd204b_ad_in_context.xdc] for cell 'fmc121_top_adc/jesd204'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/jesd204b_ad/jesd204b_ad_in_context.xdc] for cell 'fmc121_top_adc/jesd204'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk/sysclk_in_context.xdc] for cell 'sysclk_inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk/sysclk_in_context.xdc] for cell 'sysclk_inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio_0_inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio_0_inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm/GLB_dcm_in_context.xdc] for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm/GLB_dcm_in_context.xdc] for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'pulse_data_u/u_blk_mem_gen_0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'pulse_data_u/u_blk_mem_gen_0'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_1/vio_1/vio_1_in_context.xdc] for cell 'pulse_data_u/u_pulse_sum/u_pulse_parameter'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_1/vio_1/vio_1_in_context.xdc] for cell 'pulse_data_u/u_pulse_sum/u_pulse_parameter'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'pulse_data_u/u_fifo_generator_0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'pulse_data_u/u_fifo_generator_0'
+Parsing XDC File [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETA_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETB_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETA_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETB_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_p'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_n'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_p'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_n'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'txp[7]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'txp[6]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'txp[5]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'txp[4]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'txp[3]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'txp[2]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'txp[1]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'txp[0]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'tx_syncp'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'tx_syncn'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'tx_syncp'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'tx_syncn'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:132]
+CRITICAL WARNING: [Netlist 29-177] Cannot set property 'BITSTREAM.CONFIG.CONFIGRATE' because the property does not exist. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:166]
+Resolution: Create this property using create_property command before setting it.
+CRITICAL WARNING: [Netlist 29-154] Cannot set property 'CONFIG_MODE' because incorrect value 'SPIx4' specified. Expecting type 'enum' with possible values of 'B_SCAN'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:167]
+Resolution: Please check the value of the property and set to a correct value.
+Finished Parsing XDC File [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/test_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1985.816 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1985.816 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instances
+  OBUFDS => OBUFDS: 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1985.816 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1985.816 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_fifo_generator_0' at clock pin 'wr_clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_pulse_sum_ila' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_FIR_filter/u0_FIR_LP_100M' at clock pin 'aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_FIR_filter/u1_FIR_LP_100M' at clock pin 'aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_FIR_filter/u2_FIR_LP_100M' at clock pin 'aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_FIR_filter/u3_FIR_LP_100M' at clock pin 'aclk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'pulse_data_u/u_pulse_sum/u_pulse_parameter' at clock pin 'clk' is different from the actual clock period '4.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1985.816 ; gain = 1574.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu15eg-ffvb1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1985.816 ; gain = 1574.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[0]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[0]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[1]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[1]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[2]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[2]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[3]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[3]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[4]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[4]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[5]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[5]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[6]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[6]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn[7]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn[7]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[0]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[0]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[1]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[1]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[2]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[2]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[3]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[3]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[4]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[4]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[5]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[5]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[6]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[6]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp[7]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp[7]. (constraint file  e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0/jesd204_phy_0_in_context.xdc, line 38).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_pulse_sum_ila. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_FIR_filter/u0_FIR_LP_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_FIR_filter/u1_FIR_LP_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_FIR_filter/u2_FIR_LP_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_FIR_filter/u3_FIR_LP_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fmc121_top_adc/jesd204_phy_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fmc121_top_adc/jesd204. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sysclk_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vio_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fmc121_top_adc/jesd204_ad_clk/DCMINST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_pulse_sum/u_pulse_parameter. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pulse_data_u/u_fifo_generator_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1985.816 ; gain = 1574.188
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'ad_status_reg' in module 'ad9680'
+INFO: [Synth 8-5587] ROM size for "ad_config_reg" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "NEED_DELAY" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "dir" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adc_sdio" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adc_sclk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cnt_cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ad_spi_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "adwr_reg_cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ad_set_finish" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ad_status" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ad_status" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'spi_cntr_status_reg' in module 'hmc7044'
+INFO: [Synth 8-5544] ROM "SET_FINISH" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "spi_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HMC7044_SDIO" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HMC7044_CS_N" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HMC7044_SCLK" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "spi_cntr_status" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "highleavel_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rx_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "uart_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "PC_clear" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Data_send" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tx_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_11520_d0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "TRIG_OUT_REG" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          ad_config_wait |                    0000000000001 |                             0000
+         ad_config_start |                    0000000000010 |                             0001
+                ad_idle0 |                    0000000000100 |                             0010
+                ad_idle1 |                    0000000001000 |                             0011
+                ad_idle2 |                    0000000010000 |                             0100
+                ad_idle3 |                    0000000100000 |                             0101
+             ad_wr_clkl0 |                    0000001000000 |                             0110
+             ad_wr_clkl1 |                    0000010000000 |                             0111
+             ad_wr_clkh0 |                    0000100000000 |                             1000
+             ad_wr_clkh1 |                    0001000000000 |                             1001
+         ad_config_wait1 |                    0010000000000 |                             1010
+           ad_config_end |                    0100000000000 |                             1011
+         ad_config_wait2 |                    1000000000000 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ad_status_reg' using encoding 'one-hot' in module 'ad9680'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             config_wait |                             0000 |                             0000
+            config_start |                             0001 |                             0001
+                   idle0 |                             0010 |                             0010
+                   idle1 |                             0011 |                             0011
+                   idle2 |                             0100 |                             0100
+                   idle3 |                             0101 |                             0101
+                wr_clkl0 |                             0110 |                             0110
+                wr_clkl1 |                             0111 |                             0111
+                wr_clkh0 |                             1000 |                             1000
+                wr_clkh1 |                             1001 |                             1001
+            config_wait1 |                             1010 |                             1010
+              config_end |                             1011 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'spi_cntr_status_reg' using encoding 'sequential' in module 'hmc7044'
+WARNING: [Synth 8-327] inferring latch for variable 'OSCON_CTRL_reg' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:73]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_003_reg' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:72]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_005_reg' [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/new/hmc7044.vhd:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1985.816 ; gain = 1574.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   6 Input     18 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 5     
+	               20 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 21    
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 46    
++---Muxes : 
+	  13 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	  22 Input     24 Bit        Muxes := 1     
+	  13 Input     24 Bit        Muxes := 1     
+	  12 Input     24 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	  13 Input     13 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 7     
+	  13 Input      8 Bit        Muxes := 3     
+	  12 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	  13 Input      1 Bit        Muxes := 10    
+	  12 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 18    
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module test_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ad9680 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	  13 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	  22 Input     24 Bit        Muxes := 1     
+	  13 Input     24 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	  13 Input     13 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 2     
+	  13 Input      8 Bit        Muxes := 3     
+	  13 Input      1 Bit        Muxes := 9     
+Module hmc7044 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	  12 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	  12 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 2     
+Module fmc121_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 8     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module pulse_sum_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     18 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module RAM_rw 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module data_send 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module UART_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module Decode 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      1 Bit        Muxes := 4     
+Module Fifo_cache 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module UART_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  13 Input      1 Bit        Muxes := 1     
+Module pulse_data 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3528 (col length:168)
+BRAMs: 1488 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "TRIG_OUT_REG" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pulse_data_u/u_Decode/PC_clear" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pulse_data_u/u_Decode/Data_send" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pulse_data_u/clk_11520_d0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[19]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[18]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[1]
+WARNING: [Synth 8-3331] design RAM_rw has unconnected port pulse_sum[0]
+WARNING: [Synth 8-3331] design fmc121_top has unconnected port fmc_375mhz_p
+WARNING: [Synth 8-3331] design fmc121_top has unconnected port fmc_375mhz_n
+WARNING: [Synth 8-3331] design fmc121_top has unconnected port TRIG_IN
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[14]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[15]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[13]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[12]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[11]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[10]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_rx/clk_cnt_reg[9]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/uart_cnt_reg[12]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_tx/clk_cnt_reg[14]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_tx/clk_cnt_reg[15]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[13]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_tx/clk_cnt_reg[13]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[12]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_tx/clk_cnt_reg[12]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[11]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_tx/clk_cnt_reg[11]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[10]'
+INFO: [Synth 8-3886] merging instance 'pulse_data_u/u_UART_tx/clk_cnt_reg[10]' (FDC) to 'pulse_data_u/u_UART_tx/clk_cnt_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pulse_data_u/u_UART_tx/clk_cnt_reg[9] )
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[0]' (LDP) to 'fmc121_top_adc/h7044/reg_003_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[1]' (LDP) to 'fmc121_top_adc/h7044/reg_003_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_005_reg[2]' (LDC) to 'fmc121_top_adc/h7044/reg_005_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[2]' (LDP) to 'fmc121_top_adc/h7044/reg_003_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_005_reg[3]' (LDC) to 'fmc121_top_adc/h7044/reg_005_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[3]' (LDP) to 'fmc121_top_adc/h7044/reg_003_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_005_reg[4]' (LDC) to 'fmc121_top_adc/h7044/reg_005_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[4]' (LDC) to 'fmc121_top_adc/h7044/reg_003_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[6]' (LDC) to 'fmc121_top_adc/h7044/reg_003_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fmc121_top_adc/\h7044/reg_005_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fmc121_top_adc/\h7044/reg_003_reg[7] )
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/config_reg_reg[17]' (FDC) to 'fmc121_top_adc/h7044/config_reg_reg[18]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/config_reg_reg[18]' (FDC) to 'fmc121_top_adc/h7044/config_reg_reg[19]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/config_reg_reg[19]' (FDC) to 'fmc121_top_adc/h7044/config_reg_reg[20]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/config_reg_reg[20]' (FDC) to 'fmc121_top_adc/h7044/config_reg_reg[21]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/config_reg_reg[21]' (FDC) to 'fmc121_top_adc/h7044/config_reg_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[0]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[1]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[2]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/config_reg_reg[22]' (FDC) to 'fmc121_top_adc/h7044/config_reg_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fmc121_top_adc/\ad/BIR_reg )
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[3]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[4]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[5]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[6]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[7]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[8]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[9]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[10]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[11]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[12]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[13]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[14]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[15]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[16]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[17]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[18]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[20]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/ad/NEED_DELAY_reg[21]' (FD) to 'fmc121_top_adc/ad/NEED_DELAY_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fmc121_top_adc/\ad/NEED_DELAY_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fmc121_top_adc/\h7044/config_reg_reg[23] )
+WARNING: [Synth 8-3332] Sequential element (h7044/reg_003_reg[7]) is unused and will be removed from module fmc121_top.
+WARNING: [Synth 8-3332] Sequential element (h7044/reg_005_reg[7]) is unused and will be removed from module fmc121_top.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pulse_data_u/u_RAM_RW /\n_state_reg[1] )
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_003_reg[5]' (LDP) to 'fmc121_top_adc/h7044/reg_005_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fmc121_top_adc/h7044/reg_005_reg[6]' (LDP) to 'fmc121_top_adc/h7044/OSCON_CTRL_reg'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1985.816 ; gain = 1574.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------------+---------------+----------------+
+|Module Name | RTL Object       | Depth x Width | Implemented As | 
++------------+------------------+---------------+----------------+
+|fmc121_top  | ad/ad_config_reg | 32x19         | LUT            | 
++------------+------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_phy_INST/rxoutclk' to pin 'fmc121_top_adc/jesd204_phy_INST/bbstub_rxoutclk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_phy_INST/common0_qpll0_clk_out' to pin 'fmc121_top_adc/jesd204_phy_INST/bbstub_common0_qpll0_clk_out/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'fmc121_top_adc/jesd204_phy_INST/qpll0_refclk' to 'fmc121_top_adc/jesd204_ad_clk/ibufds_refclk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_phy_INST/common0_qpll0_refclk_out' to pin 'fmc121_top_adc/jesd204_phy_INST/bbstub_common0_qpll0_refclk_out/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'fmc121_top_adc/jesd204_phy_INST/qpll0_refclk' to 'fmc121_top_adc/jesd204_ad_clk/ibufds_refclk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_phy_INST/common1_qpll0_clk_out' to pin 'fmc121_top_adc/jesd204_phy_INST/bbstub_common1_qpll0_clk_out/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'fmc121_top_adc/jesd204_phy_INST/qpll0_refclk' to 'fmc121_top_adc/jesd204_ad_clk/ibufds_refclk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_phy_INST/common1_qpll0_refclk_out' to pin 'fmc121_top_adc/jesd204_phy_INST/bbstub_common1_qpll0_refclk_out/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'fmc121_top_adc/jesd204_phy_INST/qpll0_refclk' to 'fmc121_top_adc/jesd204_ad_clk/ibufds_refclk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_phy_INST/txoutclk' to pin 'fmc121_top_adc/jesd204_phy_INST/bbstub_txoutclk/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'fmc121_top_adc/jesd204_phy_INST/cpll_refclk' to 'fmc121_top_adc/jesd204_ad_clk/ibufds_refclk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sysclk_inst/clk_in1' to pin 'IBUFDS_inst/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sysclk_inst/clk_out1' to pin 'sysclk_inst/bbstub_clk_out1/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'sysclk_inst/clk_in1' to 'IBUFDS_inst/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sysclk_inst/clk_out2' to pin 'sysclk_inst/bbstub_clk_out2/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'sysclk_inst/clk_in1' to 'IBUFDS_inst/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sysclk_inst/clk_out3' to pin 'sysclk_inst/bbstub_clk_out3/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'sysclk_inst/clk_in1' to 'IBUFDS_inst/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sysclk_inst/clk_out4' to pin 'sysclk_inst/bbstub_clk_out4/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'sysclk_inst/clk_in1' to 'IBUFDS_inst/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_ad_clk/DCMINST/clk_in1' to pin 'fmc121_top_adc/jesd204_ad_clk/refclk_bufg_gt_i/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'fmc121_top_adc/jesd204_ad_clk/DCMINST/clk_out1' to pin 'fmc121_top_adc/jesd204_ad_clk/DCMINST/bbstub_clk_out1/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'fmc121_top_adc/jesd204_ad_clk/DCMINST/clk_in1' to 'fmc121_top_adc/jesd204_ad_clk/refclk_bufg_gt_i/O'
+INFO: [Synth 8-5819] Moved 15 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 2065.891 ; gain = 1654.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 2088.117 ; gain = 1676.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin tx_reset_gt
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt_prbssel[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt_prbssel[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt_prbssel[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt_prbssel[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txcharisk[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txcharisk[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txcharisk[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txcharisk[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt0_txdata[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txcharisk[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txcharisk[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txcharisk[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txcharisk[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt1_txdata[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txcharisk[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txcharisk[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txcharisk[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txcharisk[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module jesd204_phy_INST has unconnected pin gt2_txdata[13]
+INFO: [Common 17-14] Message 'Synth 8-4442' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |jesd204b_ad      |         1|
+|2     |jesd204_phy_0    |         1|
+|3     |GLB_dcm          |         1|
+|4     |sysclk           |         1|
+|5     |vio_0            |         1|
+|6     |vio_1            |         1|
+|7     |blk_mem_gen_0    |         1|
+|8     |fifo_generator_0 |         1|
+|9     |ila_3            |         1|
+|10    |fir_compiler_0   |         4|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |GLB_dcm           |     1|
+|2     |blk_mem_gen_0     |     1|
+|3     |fifo_generator_0  |     1|
+|4     |fir_compiler_0    |     1|
+|5     |fir_compiler_0__4 |     1|
+|6     |fir_compiler_0__5 |     1|
+|7     |fir_compiler_0__6 |     1|
+|8     |ila_3             |     1|
+|9     |jesd204_phy_0     |     1|
+|10    |jesd204b_ad       |     1|
+|11    |sysclk            |     1|
+|12    |vio_0             |     1|
+|13    |vio_1             |     1|
+|14    |BUFG              |     1|
+|15    |BUFG_GT           |     1|
+|16    |CARRY8            |    42|
+|17    |IBUFDS_GTE4       |     1|
+|18    |LUT1              |   103|
+|19    |LUT2              |   187|
+|20    |LUT3              |   118|
+|21    |LUT4              |   237|
+|22    |LUT5              |   146|
+|23    |LUT6              |   173|
+|24    |MUXF7             |     6|
+|25    |FDCE              |   698|
+|26    |FDPE              |     8|
+|27    |FDRE              |    95|
+|28    |LDC               |     1|
+|29    |LDCE              |     2|
+|30    |LDP               |     1|
+|31    |IBUF              |     2|
+|32    |IBUFDS            |     2|
+|33    |IOBUF             |     1|
+|34    |OBUF              |    12|
+|35    |OBUFDS            |     1|
++------+------------------+------+
+
+Report Instance Areas: 
++------+-------------------+---------------------+------+
+|      |Instance           |Module               |Cells |
++------+-------------------+---------------------+------+
+|1     |top                |                     |  2717|
+|2     |  fmc121_top_adc   |fmc121_top           |  1473|
+|3     |    ad             |ad9680               |   308|
+|4     |    h7044          |hmc7044              |   281|
+|5     |    jesd204_ad_clk |jesd204_dac_clocking |     5|
+|6     |    neg_data_inst  |neg_data             |    71|
+|7     |  pulse_data_u     |pulse_data           |  1142|
+|8     |    u_pulse_sum    |pulse_sum_module     |   430|
+|9     |    u_RAM_RW       |RAM_rw               |   107|
+|10    |    u_Decode       |Decode               |     2|
+|11    |    u_FIR_filter   |FIR_filter           |   168|
+|12    |    u_Fifo_cache   |Fifo_cache           |    60|
+|13    |    u_UART_rx      |UART_rx              |    86|
+|14    |    u_UART_tx      |UART_tx              |    64|
+|15    |    u_data_send    |data_send            |    80|
++------+-------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 293 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 2092.363 ; gain = 272.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2092.363 ; gain = 1680.734
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC fmc121_top_adc/jesd204_ad_clk/BUFG_GT_SYNC for BUFG_GT fmc121_top_adc/jesd204_ad_clk/refclk_bufg_gt_i
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2120.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instances
+  LDC => LDCE: 1 instances
+  LDP => LDPE: 1 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF, OBUF): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+207 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 2120.473 ; gain = 1713.738
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2120.473 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/synth_1/test_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file test_top_utilization_synth.rpt -pb test_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 11 11:09:24 2024...

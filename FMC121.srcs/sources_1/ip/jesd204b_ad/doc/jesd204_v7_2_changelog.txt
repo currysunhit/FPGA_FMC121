@@ -1,0 +1,288 @@
+2018.3:
+ * Version 7.2 (Rev. 4)
+ * Feature Enhancement: Implemented new XDC waiver mechanism to mask user visibility of acceptable warnings
+ * Revision change in one or more subcores
+
+2018.2:
+ * Version 7.2 (Rev. 3)
+ * Feature Enhancement: Added support for virtexuplus58g device family
+ * Revision change in one or more subcores
+
+2018.1:
+ * Version 7.2 (Rev. 2)
+ * Bug Fix: Added optional transceiver debug port dmonitorclk for UltraScale and Ultrascale+ devices
+ * Revision change in one or more subcores
+
+2017.4:
+ * Version 7.2 (Rev. 1)
+ * Bug Fix: Fixed issue stopping the user from chosing the GT type with Zynq Ultrascale Plus devices in ffvd1760 package
+ * Revision change in one or more subcores
+
+2017.3:
+ * Version 7.2
+ * Bug Fix: Fixed issue causing RXLPMEN values to be incorrect when shared logic in the core is used AR69507
+ * Bug Fix: Fixed issue where TX PRBSSEL bits would be incorrectly set to enable D21.5 when PRBS15 was selected
+ * Feature Enhancement: Core will now resync automatically to a misaligned SYSREF when SYSREF ALWAYS = 1
+ * Revision change in one or more subcores
+
+2017.2:
+ * Version 7.1 (Rev. 3)
+ * General: Updated to use JESD204_PHY v3.4 with UltraScale GT wizard 1.7
+ * General: Modified example design to used gt_powergood signal from JESD204_PHY
+
+2017.1:
+ * Version 7.1 (Rev. 2)
+ * General: Added support for ultrascale RF SoC
+ * General: Removed duplicate bus interfaces in core meta data
+ * Revision change in one or more subcores
+
+2016.4:
+ * Version 7.1 (Rev. 1)
+ * Feature Enhancement: Optimised core logic for synthesis speed improvement
+ * Revision change in one or more subcores
+
+2016.3:
+ * Version 7.1
+ * Port Change: Added differential global clock input and removed single ended tx/rx_core_clk input. UltraScale configurations only with Shared Logic in Core. See PG066 for information on how to drive new clock input
+ * Bug Fix: Fixed issue which was causing the lane ID to be incorrect in the ILA sequence: AR67349
+ * Other: Added support for GTYE4 devices
+ * Other: Added a second reset bit to the core reset register. This new bit is non self clearing and therefore allows the core to be held in reset using the reset register. The functionality of the original reset bit is unchanged
+ * Other: Reset logic in JESD204 Block level has been moved into separate module. No funcional changes
+ * Other: Enabled control of Transceiver PRBS patterns via register 0x18 by increasing the register width to 5 bits. The functionality of bits 2:0 remain unchanged. See PG066 for more information
+ * Revision change in one or more subcores
+
+2016.2:
+ * Version 7.0 (Rev. 1)
+ * Set default value of gt_rxlpmen to 1 when Transceiver Debug is not enabled
+ * Improved reset handshaking logic between JESD204 and JESD204 PHY
+ * Revision change in one or more subcores
+
+2016.1:
+ * Version 7.0
+ * Revised architecture to reduce latency through the receive core
+ * Added rx_start_of_multiframe and rx_end_of_multiframe ports to the receive core
+ * Removed tx_aclk and rx_aclk output ports
+ * Optimised TX and RX to improve timing
+ * Added BUFGs on drpclk and axiclk in example design. 7-Series only
+ * Reduced maximum number of lanes from 12 to 8
+ * Removed LMFC Buffer selection from GUI
+ * Functionality of register 0x3C (Link Error Status for lanes 8 to 11) has changed, now returns debug information. See PG066 for more information
+ * Differential global clock input has been removed and replaced with single ended tx/rx_core_clk input. UltraScale configurations only. See PG066 for information on how to drive new clock input
+ * Global Clock option has been removed from GUI for UltraScale configurations only
+ * Changes to HDL library management to support Vivado IP simulation library
+ * Revision change in one or more subcores
+
+2015.4.2:
+ * Version 6.2 (Rev. 1)
+ * No changes
+
+2015.4.1:
+ * Version 6.2 (Rev. 1)
+ * No changes
+
+2015.4:
+ * Version 6.2 (Rev. 1)
+ * Version register is now automatically set by Vivado during core generation
+ * Fixed issue where changing the number of active lanes caused Rx configurations to never assert valid data (AR65782)
+ * Revision change in one or more subcores
+
+2015.3:
+ * Version 6.2
+ * Added Support for UltraScale GTY Transceiver
+ * Improved detection of Code Group Sync across multiple lanes
+ * Improved detection of transition from Alignment characters to ILA data
+ * Changed default values of gt_txpd and gt_rxpd when shared logic is included in the core and transceiver debug is disabled. See PG066 for more information
+ * Improved AXI Write duration by decreasing write cycle
+ * Improved reliability of gt_reset outputs
+ * IP revision number added to HDL module, library, and include file names, to support designs with both locked and upgraded IP instances
+ * A BUFG which was being driven by the DRPCLK input in the clocking module has been removed
+
+2015.2.1:
+ * Version 6.1 (Rev. 2)
+ * No changes
+
+2015.2:
+ * Version 6.1 (Rev. 2)
+ * Fixed issue in receive JESD204 where a SYNC~ de-assertion for less than 5 frames plus 9 octets could cause a link initialization
+ * Fixed issue with SYNC being held low for an extra frame when Error Reporting via SYNC was enabled
+ * AXI-Streaming buses are now associated with tx/rx core clock and not tx/rx aclk
+
+2015.1_AR64524:
+ * Version 6.1 (Rev. 1)
+ * Fixed issue which was causing a receive JESD204 Subclass 2 not to have deterministic latency (AR 64445)
+ * Fixed issue with lane alignment in Rx JESD204 always being based on lane 0 being active. Fix will also set output data to zero when lane is inactive (AR 64524)
+ * Fixed issue causing Rx JESD204 to regain SYNC after alignment errors before BC characters are received (AR 64524)
+ * Fixed issue where alignment errors were being calculated for deactivated lanes (AR 64524)
+
+2015.1:
+ * Version 6.1
+ * Functionality and width of 'lanes in use' register has changed. This register can now be used to activate or deactivate a specific lane. See PG066 for more information
+ * Added support for configurable lane IDs. See PG066 for more information
+ * Fixed issue where RX data was not aligning to the LMFC crossing when Multiframe size was not a multiple of 4
+ * Fixed issue with buffer overflow register not indicating an overflow correctly
+ * Fixed issue in Tx configurations with SYSREF ALYWAYS set to '0'. If a loss of SYNC occurred, the LMFC counters were aligning to every SYSREF pulse
+ * Fixed issue in Subclass 2 configurations where output alignment was incorrect when the Multiframe size was not a multiple of 4
+ * Fixed issue with Rx Link Error Status Registers (0x01C and 0x03C) not auto clearing after a read for multi-lane designs
+ * Added GUI option to configure AXI4-Lite Management Interface Clock
+ * Added debug port gt*_txinhibit_in. This will affect 7-Series designs with Transceiver Debug enabled
+ * Added debug ports gt_txinhibit and gt_pcsrsvdin. This will affect all Ultrascale designs with Transceiver Debug enabled
+ * Changed default vaule of Watchdog Timer Disable register from '0' to '1'
+ * Added gt_rxbufreset to GUI symbol. This will affect UltraScale designs with Transceiver Debug enabled.
+
+2014.4.1:
+ * Version 6.0 (Rev. 2)
+ * Updated Ultrascale Transceiver Wizard to version 1.5
+
+2014.4:
+ * Version 6.0 (Rev. 1)
+ * Added support for Defense-grade Virtex-7Q, Kintex-7Q, Zynq-7000 and Artix-7Q devices
+ * Added support for XA Artix-7 and Zynq-7000 devices
+ * Enabled all transceiver reference clock values
+ * Added multicycle path constraint to AXI path for transmitter cores
+ * Fixed an issue with rx_tvalid going high during the ILA sequence. This was caused by Rx buffer output not being reset when the core lost and regained SYNC without a reset being applied.
+ * Encrypted source files are concatenated together to reduce the number of files and to reduce simulator compile time
+
+2014.3:
+ * Version 6.0
+ * Replaced GT Wizard Transceiver files with JESD204 PHY Core v1.0
+ * txdata, txcharisk, rxdata, rxnotintable, rxcharisk and rxdisperr are no longer single buses but have been broken up into individual lane buses. This will affect all designs with Shared Logic in Example Design
+ * Added GUI option to select whether JESD204 is driven by global clock or reference clock input
+ * Added GUI options to select default values for JESD204 configuration registers
+ * Added GUI option to select QPLL1 for UltraScale devices
+ * Added GUI options to configure transceiver settings for 7-Series devices
+ * Debug port gt*_rxpmaresetdone_out has been removed. This will affect 7-series GTH and GTP designs with Transceiver Debug enabled
+ * Reset module in Support Block has been removed. All reset logic is now controlled by the JESD204 PHY core. This will affect all designs with Shared Logic in Core
+ * The MMCM in the 7-Series GTP clocking module has been removed, it can now be found in the Support Block of the JESD204 PHY core. This will affect 7-Series GTP designs with Shared Logic in Core
+ * Ports common_pll0_*, common_pll1_* and common_pll2_* have been renamed to common0_pll_*, common1_pll_* and common2_pll_*. This will affect all 7-Series designs.
+ * Fixed issue with missing reset modules in GTHE2 for line rates where RXOUT_DIV>1 (AR 59595)
+
+2014.2:
+ * Version 5.2 (Rev. 1)
+ * ZYNQ-7000 XC7Z015 support added (check DS190 for the maximum number of GTPs available in each part/package)
+ * Updated to use version 1.3 of the Ultrascale GT Wizard
+ * Updated to use version 3.3 of the 7-Series GT Wizard
+ * Improved GUI speed and responsiveness, no functional changes
+ * Fixed auto upgrade issue (AR 60386)
+ * Fixed Ultrascale GT Wrapper DRPCLK clock connections for multi-lane core designs (AR 60387)
+ * Fixed an issue on the GUI symbol where the gt_dmonitorout ports did not appear in the transcevier_debug bus interfaces when targeting the GTXE2 transceivers
+ * Fixed an issue on the GUI symbol where the gt_drpaddr ports showed a width of 16 in the DRP Buses
+
+2014.1:
+ * Version 5.2
+ * Added GUI option to select on which clock edge SYSREF is sampled
+ * Added GUI option for Ultrascale devices to select between CPLL and QPLL0
+ * Added AXI register to enable skewing of SYSREF
+ * Added AXI register to read back value of SYNC
+ * Added AXI register to read back if a valid SYSREF had been captured
+ * Added AXI register to determine behavior of SYNC after core has dropped out of sync
+ * 9, 10, 11 and 12 Lane support added (excluding Artix). Additional pins required for the third QUAD (PLL2) have been added to GTX and GTH to support up to 12 lanes.
+ * Artix XC7A35T, XC7A50T and XC7A75T support added (check DS180 for the maximum number of GTPs available in each part/package)
+ * The AXI IPIF interface no longer uses the proc_common library which reduced the number of unused RTL filed delivered with the core
+ * Fixed behavior of tx_tvalid not being correctly asserted under certain conditions. (AR 58747)
+ * Netlists created by write_verilog and write_vhdl are IEEE P1735 encrypted, with keys for supported simulators so that netlist simulation can still be done
+ * Enable third party synthesis tools to read encrypted netlists (but not source HDL)
+ * Removed optional port gt*_txphaligndone_out. Affects 7 series configurations with transceiver debug ports enabled
+ * Removed optional port gt*_rxcdrlock_out. Affects 7 series configurations with transceiver debug ports enabled
+
+2013.4:
+ * Version 5.1
+ * Kintex UltraScale Pre-Production support.
+ * Fix register address decode offset for captured ILA and other lane-specific data. (AR 58089)
+ * Added additional transceiver control and status ports
+ * For IP Integrator, previous bus I/F names have been renamed for consistency. Upgraded IP Integrator designs using this core will require reconnection of the Bus I/F's.
+
+2013.3:
+ * Version 5.0
+ * Added GUI option to include or exclude RPAT and JSPAT modules.
+ * Removed GUI option to generate shared core. Use Shared Logic Tab to control GT sharing in this version.
+ * Removed GUI option for JESD204 Subclass selection. Subclass is now selected using a register.
+ * IPIF has been updated to latest version (v2.0).
+ * AXI4-Lite Address map has been updated.
+ * Count Error module now calculates all byte errors in received data.
+ * A single AXI Streaming bus is used for all txdata and rxdata lanes.
+ * The Hardware Demo design is no longer provided with the core and is only available as a separate download.
+ * The maximum multiframe size is now limited to 1000 octets.
+ * Pins added to select between CPLL and QPLL in GTX and GTH devices.
+ * Added GTX watchdog timer logic in Zynq devices. The watchdog timer was only generated for Virtex and Kintex devices prior to this revision.
+ * Fix error reporting by SYNC interface. rx_tvalid incorrectly de-asserted when errors were reported using SYNC~
+ * Fix loss of sync and error reporting using sync interface to be fully compliant with JESD204B specification.
+ * Fix for subclass 1 periodic SYSREF where SYSREF was not reliably captured unless it was a single cycle pulse.
+ * sysref_always behaviour changed to force SYNC~ assertion if the position of SYSREF changes when sysref_always=1.
+ * GTX and GTH now default to 4 byte alignment and GTP to 2 byte alignment to ensure received AXI data is word aligned.
+ * Added support for IP Integrator.
+ * Added support for out of context flow.
+ * Reduced warnings in synthesis and simulation.
+ * Added support for Cadence IES and Synopsys VCS simulators.
+ * Updated synchronizers for clock domain crossing to reduce Mean Time Between Failures (MTBF) from metastability.
+ * Added GUI option to include or exclude shareable logic resources in the core.
+ * Added optional transceiver control and status ports.
+
+2013.2:
+ * Version 4.0 (Rev. 1)
+ * Please follow the updated procedure for replacing the GT Wrappers described in AR56079
+ * Constraints processing order changed
+ * Fixed GTP and GTH attributes for Suboptimal RX Termination Use Modes (AR55366)
+ * Fixed GTX, GTH and GTP attributes for minimum and maximum RX elastic buffer latency, RX elastic buffer overflow and underflow thresholds and RX elastic buffer threshold override (AR56078)
+ * Fixed behavior for Rx Lanes In Use setting (AR55503)
+ * Fixed AXI4-Lite address decode for 8bit and 16bit writes to the Rx Buffer Delay and Frames per Multiframe register (AR55460)
+ * Fix reset coding style in <core>_block.v to ensure synthesis identifies synchronous resets correctly
+ * IPI Level-0 support was added. Created bus interface for AXI clocks and resets
+ * Updated to support production silicon for Zynq, Artix-7 and Virtex-7 families
+ * Fixed MMCM_LOCK input for rx fsm startup module instantiation in GTP top level for shared version of the core
+
+2013.1:
+ * Version 4.0
+ * Hierarchy updated: The Block Level is now the default core top level and the clock buffers have moved from the Block Level to the Example Design. See the Migration section in the Product Guide for details.
+ * AXI4-Lite Address map corrections including the addition of byte write support.
+ * Kintex-7 GTX Wrappers updated to production version including additional clock domain crossing synchronisation logic for improved reliability.
+ * Added support for Artix-7.
+ * Increase rx_buffer_adjust from 256 to 1024.
+ * Fix for rx_cfg_sysref_always not initialized in the block level for an Rx core.
+ * Pipeline stage added to receiver to improve timing in Vivado synthesis.
+ * Zynq support added to HW demonstration platform
+
+(c) Copyright 2011 - 2018 Xilinx, Inc. All rights reserved.
+
+This file contains confidential and proprietary information
+of Xilinx, Inc. and is protected under U.S. and
+international copyright and other intellectual property
+laws.
+
+DISCLAIMER
+This disclaimer is not a license and does not grant any
+rights to the materials distributed herewith. Except as
+otherwise provided in a valid license issued to you by
+Xilinx, and to the maximum extent permitted by applicable
+law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+(2) Xilinx shall not be liable (whether in contract or tort,
+including negligence, or under any other theory of
+liability) for any loss or damage of any kind or nature
+related to, arising under or in connection with these
+materials, including for any direct, or any indirect,
+special, incidental, or consequential loss or damage
+(including loss of data, profits, goodwill, or any type of
+loss or damage suffered as a result of any action brought
+by a third party) even if such damage or loss was
+reasonably foreseeable or Xilinx had been advised of the
+possibility of the same.
+
+CRITICAL APPLICATIONS
+Xilinx products are not designed or intended to be fail-
+safe, or for use in any application requiring fail-safe
+performance, such as life-support or safety devices or
+systems, Class III medical devices, nuclear facilities,
+applications related to the deployment of airbags, or any
+other applications that could lead to death, personal
+injury, or severe property or environmental damage
+(individually and collectively, "Critical
+Applications"). Customer assumes the sole risk and
+liability of any use of Xilinx products in Critical
+Applications, subject only to applicable laws and
+regulations governing limitations on product liability.
+
+THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+PART OF THIS FILE AT ALL TIMES.

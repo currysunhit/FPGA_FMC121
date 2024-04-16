@@ -1,0 +1,945 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 11 11:18:05 2024
+# Process ID: 11544
+# Current directory: E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1
+# Command line: vivado.exe -log test_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source test_top.tcl -notrace
+# Log file: E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top.vdi
+# Journal file: E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source test_top.tcl -notrace
+Command: link_design -top test_top -part xczu15eg-ffvb1156-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.dcp' for cell 'sysclk_inst'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/jesd204b_ad.dcp' for cell 'fmc121_top_adc/jesd204'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/jesd204_phy_0.dcp' for cell 'fmc121_top_adc/jesd204_phy_INST'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm.dcp' for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'pulse_data_u/u_blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.dcp' for cell 'pulse_data_u/u_fifo_generator_0'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_3.dcp' for cell 'pulse_data_u/u_pulse_sum_ila'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.dcp' for cell 'pulse_data_u/u_FIR_filter/u0_FIR_LP_100M'
+INFO: [Project 1-454] Reading design checkpoint 'e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_1/vio_1.dcp' for cell 'pulse_data_u/u_pulse_sum/u_pulse_parameter'
+INFO: [Netlist 29-17] Analyzing 824 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xczu15eg-ffvb1156-2-i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. fmc121_top_adc/jesd204_ad_clk/DCMINST/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. sysclk_inst/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'fmc121_top_adc/jesd204_ad_clk/DCMINST/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'sysclk_inst/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Chipscope 16-324] Core: pulse_data_u/u_pulse_sum/u_pulse_parameter UUID: e39e4368-96c5-5bb6-965b-8d5f7fc76497 
+INFO: [Chipscope 16-324] Core: pulse_data_u/u_pulse_sum_ila UUID: 62ea47f0-3996-5258-8d9f-658f473066c0 
+INFO: [Chipscope 16-324] Core: vio_0_inst UUID: e7ff0c21-2432-5e10-a2c1-ded3bcfa7191 
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila_impl.xdc] for cell 'pulse_data_u/u_pulse_sum_ila/inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila_impl.xdc] for cell 'pulse_data_u/u_pulse_sum_ila/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila.xdc] for cell 'pulse_data_u/u_pulse_sum_ila/inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila.xdc] for cell 'pulse_data_u/u_pulse_sum_ila/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u0_FIR_LP_100M/U0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u0_FIR_LP_100M/U0'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u1_FIR_LP_100M/U0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u1_FIR_LP_100M/U0'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u2_FIR_LP_100M/U0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u2_FIR_LP_100M/U0'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u3_FIR_LP_100M/U0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc] for cell 'pulse_data_u/u_FIR_filter/u3_FIR_LP_100M/U0'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:79]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:79]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:79]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:79]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:83]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:83]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:83]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:83]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:87]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:87]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:87]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:87]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:95]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:95]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:95]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:95]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:99]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:99]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:103]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:103]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:107]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:107]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:111]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:111]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:115]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:115]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:119]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:119]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:119]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:119]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:123]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:123]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:123]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:123]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:127]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:127]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:127]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:127]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:131]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:131]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:134]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:134]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:134]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:134]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:138]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:138]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:138]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:138]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:142]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:142]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:149]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:149]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*RXRESETDONE/data_sync_reg1'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:157]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*RXRESETDONE/data_sync_reg1]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:157]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*TXRESETDONE/data_sync_reg1'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:161]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*TXRESETDONE/data_sync_reg1]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:161]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:169]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:169]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:173]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:173]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:181]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:181]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:185]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:185]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:188]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:188]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*x_pll_lock_i_reg'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:206]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*x_pll_lock_i_reg]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:206]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:213]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:213]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:219]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:219]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:222]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:222]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:228]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:228]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:231]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:231]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:237]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:237]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:237]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:237]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:241]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:241]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:241]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:241]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:245]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:245]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*hold_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:245]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*hold_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:245]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:249]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:249]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:249]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc:249]
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/ip_0/synth/jesd204_phy_0_gt.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/jesd204_phy_0_gt_i/inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/ip_0/synth/jesd204_phy_0_gt.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/jesd204_phy_0_gt_i/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc] for cell 'fmc121_top_adc/jesd204/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*/jesd204_block_i/IP2Bus_Data_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:95]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*/jesd204_block_i/IP2Bus_Data_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:95]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*tx_cfg_lid*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:115]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*tx_cfg_lid*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:115]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*got_sysref_r_reg*'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:121]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*got_sysref_r_reg*]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc:121]
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204b_ad/synth/jesd204b_ad.xdc] for cell 'fmc121_top_adc/jesd204/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk_board.xdc] for cell 'sysclk_inst/inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk_board.xdc] for cell 'sysclk_inst/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.xdc] for cell 'sysclk_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.xdc:57]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2376.742 ; gain = 405.250
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/sysclk/sysclk.xdc] for cell 'sysclk_inst/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_0_inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_0_inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm_board.xdc] for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST/inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm_board.xdc] for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm.xdc] for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST/inst'
+INFO: [Timing 38-2] Deriving generated clocks [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm.xdc:57]
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/GLB_dcm/GLB_dcm.xdc] for cell 'fmc121_top_adc/jesd204_ad_clk/DCMINST/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_1/vio_1.xdc] for cell 'pulse_data_u/u_pulse_sum/u_pulse_parameter'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/vio_1/vio_1.xdc] for cell 'pulse_data_u/u_pulse_sum/u_pulse_parameter'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'pulse_data_u/u_fifo_generator_0/U0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'pulse_data_u/u_fifo_generator_0/U0'
+Parsing XDC File [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETA_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETB_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETA_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_DETB_ADJ'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_p'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_n'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_p'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_sysref_n'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[7]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[6]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[5]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[4]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[3]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[2]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[1]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txp[0]'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_syncp'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_syncn'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_syncp'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_syncn'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Netlist 29-177] Cannot set property 'BITSTREAM.CONFIG.CONFIGRATE' because the property does not exist. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:166]
+Resolution: Create this property using create_property command before setting it.
+CRITICAL WARNING: [Netlist 29-154] Cannot set property 'CONFIG_MODE' because incorrect value 'SPIx4' specified. Expecting type 'enum' with possible values of 'B_SCAN'. [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc:167]
+Resolution: Please check the value of the property and set to a correct value.
+Finished Parsing XDC File [E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/constrs_1/new/top.xdc]
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clock_group.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clock_group.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clocks.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst'
+INFO: [Timing 38-2] Deriving generated clocks [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clocks.xdc:13]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance tx_core_clk]'. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clocks.xdc:15]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clocks.xdc:15]
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/jesd204_phy_0/synth/jesd204_phy_0_clocks.xdc] for cell 'fmc121_top_adc/jesd204_phy_INST/inst'
+Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'pulse_data_u/u_fifo_generator_0/U0'
+Finished Parsing XDC File [e:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'pulse_data_u/u_fifo_generator_0/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_rx_active/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_rx_active/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204/inst/i_jesd204b_ad_reset_block/sync_core_rst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'fmc121_top_adc/jesd204/inst/i_jesd204b_ad_reset_block/sync_core_rst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'pulse_data_u/u_fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'pulse_data_u/u_fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'pulse_data_u/u_fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'pulse_data_u/u_fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gt_txresetdone/cdc_i'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gt_txresetdone/cdc_i'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_txresetdone/cdc_i'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_txresetdone/cdc_i'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_rxresetdone/cdc_i'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_rxresetdone/cdc_i'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gt_rxresetdone/cdc_i'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gt_rxresetdone/cdc_i'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rx_sync'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rx_sync'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus2_read'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus2_read'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus2_ack'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus2_ack'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rx_sysref_captured'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rx_sysref_captured'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/i_jesd204b_ad_reset_block/sync_gt_resetdone'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/i_jesd204b_ad_reset_block/sync_gt_resetdone'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus_read'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus_read'
+Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus_ack'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'fmc121_top_adc/jesd204/inst/sync_rxstatus_ack'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2399.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 250 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 124 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 24 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instances
+  OBUFDS => OBUFDS: 1 instances
+  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 80 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 16 instances
+
+25 Infos, 131 Warnings, 22 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2399.562 ; gain = 1990.930
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu15eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu15eg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2399.562 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 13255e6f8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2399.562 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "cdf5650d99618b9a".
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2496.676 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 178c15e08
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 2496.676 ; gain = 23.645
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 60 inverter(s) to 780 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 115ec5c87
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 2504.809 ; gain = 31.777
+INFO: [Opt 31-389] Phase Retarget created 232 cells and removed 433 cells
+INFO: [Opt 31-1021] In phase Retarget, 337 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: 13697079b
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 2504.809 ; gain = 31.777
+INFO: [Opt 31-389] Phase Constant propagation created 611 cells and removed 1660 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 352 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: b3e05bf6
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2504.809 ; gain = 31.777
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 5261 cells
+INFO: [Opt 31-1021] In phase Sweep, 1821 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG sysclk_inst/inst/clk_out1_sysclk_BUFG_inst to drive 0 load(s) on clock net sysclk_inst/inst/clk_out1_sysclk_BUFGCE
+INFO: [Opt 31-194] Inserted BUFG sysclk_inst/inst/clk_out2_sysclk_BUFG_inst to drive 0 load(s) on clock net sysclk_inst/inst/clk_out2_sysclk_BUFGCE
+INFO: [Opt 31-194] Inserted BUFG sysclk_inst/inst/clk_out3_sysclk_BUFG_inst to drive 0 load(s) on clock net sysclk_inst/inst/clk_out3_sysclk_BUFGCE
+INFO: [Opt 31-194] Inserted BUFG sysclk_inst/inst/clk_out4_sysclk_BUFG_inst to drive 0 load(s) on clock net sysclk_inst/inst/clk_out4_sysclk_BUFGCE
+INFO: [Opt 31-194] Inserted BUFG fmc121_top_adc/jesd204_ad_clk/DCMINST/inst/clk_out1_GLB_dcm_BUFG_inst to drive 0 load(s) on clock net fmc121_top_adc/jesd204_ad_clk/DCMINST/inst/clk_out1_GLB_dcm_BUFGCE
+INFO: [Opt 31-193] Inserted 5 BUFG(s) on clock nets
+INFO: [Opt 31-274] Optimized connectivity to 1 cascaded buffer cells
+Phase 5 BUFG optimization | Checksum: 154ef9ce2
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 2504.809 ; gain = 31.777
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 1 cells.
+
+Phase 6 Shift Register Optimization
+Phase 6 Shift Register Optimization | Checksum: 150d647d4
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 2504.809 ; gain = 31.777
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 16ba0d513
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 2504.809 ; gain = 31.777
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 96 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             232  |             433  |                                            337  |
+|  Constant propagation         |             611  |            1660  |                                            352  |
+|  Sweep                        |               0  |            5261  |                                           1821  |
+|  BUFG optimization            |               0  |               1  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             96  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 2504.809 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 10f0ce19a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 2504.809 ; gain = 31.777
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+WARNING: [Pwropt 34-71] Flop 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[4]' has constant clock net fmc121_top_adc/<const0>
+WARNING: [Pwropt 34-71] Flop 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[0]' has constant clock net fmc121_top_adc/<const0>
+WARNING: [Pwropt 34-71] Flop 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[1]' has constant clock net fmc121_top_adc/<const0>
+WARNING: [Pwropt 34-71] Flop 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[2]' has constant clock net fmc121_top_adc/<const0>
+WARNING: [Pwropt 34-71] Flop 'fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[3]' has constant clock net fmc121_top_adc/<const0>
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.404 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 37 BRAM(s) out of a total of 67 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 37 newly gated: 30 Total Ports: 134
+Ending PowerOpt Patch Enables Task | Checksum: a557a0e3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.600 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Ending Power Optimization Task | Checksum: a557a0e3
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:32 . Memory (MB): peak = 4345.125 ; gain = 1840.316
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 16187492f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 16187492f
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 16187492f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+65 Infos, 136 Warnings, 22 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:15 . Memory (MB): peak = 4345.125 ; gain = 1945.562
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.099 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file test_top_drc_opted.rpt -pb test_top_drc_opted.pb -rpx test_top_drc_opted.rpx
+Command: report_drc -file test_top_drc_opted.rpt -pb test_top_drc_opted.pb -rpx test_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu15eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu15eg'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: c2d9abc6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 154fdf0ee
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 24c4c3b18
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:25 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 24c4c3b18
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:25 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 24c4c3b18
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:25 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2542b0450
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:33 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 16c02817a
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:02 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 16d197094
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:03 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 16d197094
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:03 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1adfe949f
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:05 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 13fd674a2
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:05 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.4 Small Shape Clustering
+Phase 3.4 Small Shape Clustering | Checksum: 16c706c8a
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:07 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.5 Flow Legalize Slice Clusters
+Phase 3.5 Flow Legalize Slice Clusters | Checksum: 1d56c700f
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:08 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.6 Slice Area Swap
+Phase 3.6 Slice Area Swap | Checksum: 214e0acda
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:10 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.7 Commit Slice Clusters
+Phase 3.7 Commit Slice Clusters | Checksum: 22e716130
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:12 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 250364819
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:13 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 24d35341d
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:14 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 24d35341d
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:14 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 289f3d03b
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 289f3d03b
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:23 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.462. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: e42542b2
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:44 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: e42542b2
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:44 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: e42542b2
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:44 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1a0722c4f
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 18dee4be4
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 18dee4be4
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Ending Placer Task | Checksum: 15d53e3ce
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+93 Infos, 136 Warnings, 22 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:31 ; elapsed = 00:01:56 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file test_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.112 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file test_top_utilization_placed.rpt -pb test_top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file test_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu15eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu15eg'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 1be9029a ConstDB: 0 ShapeSum: 851df797 RouteDB: bc4ce99d
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: f2e18177
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:59 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 9270728f NumContArr: 23e2dad3 Constraints: a1deb7c0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 158320522
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:59 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 158320522
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:59 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 158320522
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:59 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 155cb0efd
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:01 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 215802082
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:09 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.542  | TNS=0.000  | WHS=-1.123 | THS=-88.548|
+
+
+Phase 2.6 Update Timing for Bus Skew
+
+Phase 2.6.1 Update Timing
+Phase 2.6.1 Update Timing | Checksum: 227a05abc
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:17 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.542  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.6 Update Timing for Bus Skew | Checksum: 1ed7cc57c
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:17 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 247aab4e8
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:17 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 26bcabd0d
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:25 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4298
+ Number of Nodes with overlaps = 427
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.448  | TNS=0.000  | WHS=-1.504 | THS=-3.839 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1758006d8
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:43 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 88
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.452  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: d6395cc7
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:46 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.444  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 18d80efdb
+
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:46 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 18d80efdb
+
+Time (s): cpu = 00:02:35 ; elapsed = 00:01:46 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1d846677f
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:49 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.452  | TNS=0.000  | WHS=-0.252 | THS=-0.252 |
+
+Phase 5.1 Delay CleanUp | Checksum: 2a3b45e36
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:49 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2a3b45e36
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:49 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 2a3b45e36
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:49 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 29133ebec
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.452  | TNS=0.000  | WHS=-0.252 | THS=-0.252 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1f69419b4
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 28d48d2b0
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:52 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.616584 %
+  Global Horizontal Routing Utilization  = 0.846616 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 21b81ca06
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:01:53 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 21b81ca06
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:01:53 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 9 Depositing Routes
+INFO: [Route 35-467] Router swapped GT pin fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/jesd204_phy_0_gt_i/inst/gen_gtwizard_gthe4_top.jesd204_phy_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE4_CHANNEL_X0Y12/NORTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/jesd204_phy_0_gt_i/inst/gen_gtwizard_gthe4_top.jesd204_phy_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE4_CHANNEL_X0Y13/NORTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/jesd204_phy_0_gt_i/inst/gen_gtwizard_gthe4_top.jesd204_phy_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE4_CHANNEL_X0Y14/NORTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_block_i/jesd204_phy_0_gt_i/inst/gen_gtwizard_gthe4_top.jesd204_phy_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE4_CHANNEL_X0Y15/NORTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin fmc121_top_adc/jesd204_phy_INST/inst/jesd204_phy_gt_common_0_i/jesd204_phy_0_gt_common_i/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST/GTREFCLK00 to physical pin GTHE4_COMMON_X0Y3/COM0_REFCLKOUT3
+Phase 9 Depositing Routes | Checksum: 21b81ca06
+
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:55 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 288c16bf2
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:57 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.452  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 288c16bf2
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:57 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Time taken to check if laguna hold fix is required (in secs): 0
+Skip PhysOpt in Router because non-negative WNS value: 4.5413e-10 .
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:02 . Memory (MB): peak = 4345.125 ; gain = 0.000
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+119 Infos, 136 Warnings, 22 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:05 ; elapsed = 00:02:05 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 4345.125 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file test_top_drc_routed.rpt -pb test_top_drc_routed.pb -rpx test_top_drc_routed.rpx
+Command: report_drc -file test_top_drc_routed.rpt -pb test_top_drc_routed.pb -rpx test_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file test_top_methodology_drc_routed.rpt -pb test_top_methodology_drc_routed.pb -rpx test_top_methodology_drc_routed.rpx
+Command: report_methodology -file test_top_methodology_drc_routed.rpt -pb test_top_methodology_drc_routed.pb -rpx test_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file E:/01syf/00BackupAndLearning/FPGA/MY_test/FMC121_AD/FMC121_AD.runs/impl_1/test_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file test_top_power_routed.rpt -pb test_top_power_summary_routed.pb -rpx test_top_power_routed.rpx
+Command: report_power -file test_top_power_routed.rpt -pb test_top_power_summary_routed.pb -rpx test_top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+131 Infos, 137 Warnings, 22 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file test_top_route_status.rpt -pb test_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file test_top_timing_summary_routed.rpt -pb test_top_timing_summary_routed.pb -rpx test_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file test_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file test_top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file test_top_bus_skew_routed.rpt -pb test_top_bus_skew_routed.pb -rpx test_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force test_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xczu15eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu15eg'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer fmc121_top_adc/ad/IOBUF_inst/IBUFCTRL_INST has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC PDRC-153] Gated clock check: Net fmc121_top_adc/h7044/eqOp is a gated clock net sourced by a combinational pin fmc121_top_adc/h7044/OSCON_CTRL_reg_i_1/O, cell fmc121_top_adc/h7044/OSCON_CTRL_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fmc121_top_adc/h7044/reg_005_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin fmc121_top_adc/h7044/reg_005_reg[0]_i_2/O, cell fmc121_top_adc/h7044/reg_005_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fmc121_top_adc/h7044/reg_005_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin fmc121_top_adc/h7044/reg_005_reg[1]_i_2/O, cell fmc121_top_adc/h7044/reg_005_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC RTSTAT-10] No routable loads: 58 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, vio_0_inst/inst/PROBE_OUT_ALL_INST/G_PROBE_OUT[1].PROBE_OUT0_INST/probe_out1[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, pulse_data_u/ram_in_data[16], pulse_data_u/ram_in_data[17], pulse_data_u/ram_in_data[18]... and (the first 15 of 56 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 5 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 155849216 bits.
+Writing bitstream ./test_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-83] Releasing license: Implementation
+150 Infos, 143 Warnings, 22 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:51 ; elapsed = 00:00:44 . Memory (MB): peak = 4345.125 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 11 11:25:35 2024...
